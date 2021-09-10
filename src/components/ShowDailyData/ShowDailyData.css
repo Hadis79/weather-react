@@ -1,0 +1,58 @@
+.container {
+    background-color: violet;
+    width: 100%;
+}
+
+.forecast-weather {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin-right: 2%;
+    margin-bottom: 10%;
+}
+
+.one-day {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.144);
+    margin-left: 30px;
+    padding: 20px;
+    margin-top: 5%;
+    z-index: 2;
+    width: 30%;
+    border-radius: 20px;
+}
+
+.one-day div {
+    margin-top: 20px;
+}
+
+.name-of-day {
+    font-size: 14px;
+    background-color: rgba(71, 70, 70, 0.705);
+    border-radius: 2px;
+}
+
+.days .fa-sun {
+    color: yellow;
+}
+
+.nights .fa-moon {
+    color: darkslategray;
+}
+
+@media only screen and (max-width: 1000px) {
+    .forecast-weather {
+        display: flex;
+        flex-direction: column;
+    }
+    .one-day {
+        width: 40%;
+        padding: 50px;
+        margin-right: 8%;
+    }
+}

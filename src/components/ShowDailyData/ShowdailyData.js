@@ -10,13 +10,14 @@ const ShowDailyData = ({ lat, lon }) => {
     setForCastWeather(data.daily);
   }, [lat, lon]);
 
+
   return (
     <div className="forecast-weather">
       {forecastWeather.map((days) => {
-     
+   
         return (
         
-          <div className="one-day">
+          <div className="one-day" key={days.weather.id} >
             <div className="name-of-day">
               {new Date(days.dt * 1000).toLocaleDateString("en", {
                 weekday: "long",
@@ -28,12 +29,14 @@ const ShowDailyData = ({ lat, lon }) => {
                 alt=""
               />
             </div>
+            <div className="predict-days">
             <div className="days">
               <i class="fas fa-sun"></i> {Math.round(days.temp.day)}
             </div>
             <div className="description">{days.weather[0].description}</div>
             <div className="nights">
               <i class="fas fa-moon"></i> {Math.round(days.temp.night)}
+            </div>
             </div>
           </div>
         )
