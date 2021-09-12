@@ -6,23 +6,21 @@ import Carousell from "./components/ShowInformation/Carousell";
 
 function App() {
   const [saveCity, setSaveCity] = useState("");
-const [index,setIndex]=useState('')
+  const [index, setIndex] = useState("");
+  const [showEmptyArrayError, setShowEmptyArrayError] = useState(false);
 
   const getDataFromInput = (dataInput) => {
     setSaveCity(dataInput);
   };
-const removeBtnHandler=(id)=>{
- setIndex(id)
- 
-}
+  const removeBtnHandler = (id) => {
+    setIndex(id);
+  };
 
-  const [storeInfo, loading, error] = useFetchData(saveCity,index);
-
+  const [storeInfo, loading, error] = useFetchData(saveCity, index);
   return (
     <div className="body">
       <div className={`card`}>
         <Header />
-
         <div>
           <Carousell
             loading={loading}
@@ -31,6 +29,7 @@ const removeBtnHandler=(id)=>{
             removeBtnHandler={removeBtnHandler}
           />
         </div>
+        {storeInfo.length === 0 && <div className='empty-array-error'><h4>Your Search History is Empty...</h4> </div>}
 
         {error && <h6>{error}</h6>}
       </div>

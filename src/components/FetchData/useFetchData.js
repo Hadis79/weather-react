@@ -53,7 +53,6 @@ const useFetchData = (saveCity, index) => {
     setStoreInfo(cityRemoved);
     
   }, [index]);
- 
   return [storeInfo, loading, error];
 };
 

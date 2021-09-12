@@ -1,0 +1,46 @@
+.input-weather {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+    width: 100%;
+}
+
+.text-input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.icon {
+    background-color: #fff;
+    font-size: 100%;
+    padding: 9px;
+    color: #333;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.text-input input {
+    padding: 9px;
+    border: none;
+    width: 100%;
+}
+
+.text-input input:focus {
+    outline: none;
+}
+
+button {
+    padding: 9px;
+    border: none;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    background-color: #333;
+    color: #fff;
+}
+
+button:focus {
+    outline: none;
+}

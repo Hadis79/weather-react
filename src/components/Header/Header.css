@@ -1,0 +1,23 @@
+.icon-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    z-index: 3;
+    padding: 20px;
+}
+
+.right-side,
+.left-side {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.notification {
+    margin-left: 20px;
+}
+
+.signal {
+    margin-right: 20px;
+}

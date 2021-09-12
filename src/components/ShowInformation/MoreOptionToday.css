@@ -1,14 +1,26 @@
+.flexable {
+    display: flex;
+    flex-direction: column;
+}
+
 .more-option {
     display: grid;
     grid-template-rows: auto auto;
     grid-template-columns: auto auto auto;
     grid-row-gap: 20px;
     grid-column-gap: 20%;
-    margin-left: 20%;
+    margin-left: 10%;
     border-left: 1px solid #fff;
-    padding: 0px 10%;
+    padding: 0 12%;
 }
 
 .more-option span {
     display: block;
+    font-weight: bolder;
+}
+
+@media (max-width:600px) {
+    .more-option {
+        border-left: 0;
+    }
 }
