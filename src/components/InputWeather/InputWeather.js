@@ -54,7 +54,7 @@ const InputWeather = ({ getDataFromInput }) => {
           onKeyDown={onKeyDownHandler}
         />
         <button className="send-btn" onClick={submitedHandler}>
-          send
+          send City
         </button>
         <ToastContainer />
       </div>
