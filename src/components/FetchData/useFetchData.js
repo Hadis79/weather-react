@@ -42,7 +42,7 @@ const useFetchData = (saveCity, index) => {
       }
     }
     fetchApi();
-  }, [saveCity]);
+  }, [saveCity,storeInfo]);
   
   useEffect(() => {
     
