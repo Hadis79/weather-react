@@ -2,12 +2,16 @@ import { useState, useEffect } from "react";
 import "./ShowDailyData.css";
 const ShowDailyData = ({ lat, lon }) => {
   const [forecastWeather, setForCastWeather] = useState([]);
-  useEffect(async () => {
-    const response = await fetch(
-      `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=hourely,minutely&units=metric&appid=00486d0b45f49ac1770bcbfb54102cc3`
-    );
-    const data = await response.json();
-    setForCastWeather(data.daily);
+  useEffect( () => {
+    async function dailyInfo(){
+
+      const response = await fetch(
+        `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=hourely,minutely&units=metric&appid=00486d0b45f49ac1770bcbfb54102cc3`
+      );
+      const data = await response.json();
+      setForCastWeather(data.daily);
+    }
+    dailyInfo()
   }, [lat, lon]);
 
   return (

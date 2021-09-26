@@ -7,7 +7,6 @@ import Carousell from "./components/ShowInformation/Carousell";
 function App() {
   const [saveCity, setSaveCity] = useState("");
   const [index, setIndex] = useState("");
-  const [showEmptyArrayError, setShowEmptyArrayError] = useState(false);
 
   const getDataFromInput = (dataInput) => {
     setSaveCity(dataInput);

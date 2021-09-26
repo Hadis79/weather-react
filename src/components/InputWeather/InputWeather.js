@@ -6,7 +6,6 @@ import "react-toastify/dist/ReactToastify.css";
 const InputWeather = ({ getDataFromInput }) => {
   const [inputValue, setInputValue] = useState();
   const [citiesArray, setCitiesArray] = useState([]);
-  const [languageLimit,setlnguageLimit]=useState(false)
   const valueHandler = (e) => {
     
     
@@ -54,7 +53,7 @@ const InputWeather = ({ getDataFromInput }) => {
           onKeyDown={onKeyDownHandler}
         />
         <button className="send-btn" onClick={submitedHandler}>
-          send City
+          send
         </button>
         <ToastContainer />
       </div>
