@@ -1,6 +1,6 @@
 import InputWeather from "../InputWeather/InputWeather";
 import ShowDailyData from "../ShowDailyData/ShowdailyData";
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+// import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 
 import img from "../../img/Spinner-1.gif";
 import "react-awesome-slider/dist/styles.css";
